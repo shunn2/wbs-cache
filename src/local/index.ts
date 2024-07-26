@@ -1,5 +1,5 @@
 import LocalStorageService from '@utils/localStorage';
-import { LocalCacheOption } from 'types';
+import { LocalCacheOption } from '@src/types';
 
 export default class LocalCache {
   protected localStorageService: LocalStorageService =
