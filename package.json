@@ -1,11 +1,23 @@
 {
-  "name": "typescript-npm-package-template",
-  "version": "0.0.0-development",
-  "description": "A template for creating npm packages using TypeScript and VSCode",
-  "main": "./lib/index.js",
+  "name": "ws-cache",
+  "version": "0.0.1",
+  "description": "A serivce that serving web storage for your application",
+  "main": "./src/index.ts",
   "files": [
-    "lib/**/*"
+    "src/**/*"
   ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./src/index.d.ts",
+        "default": "./src/index.js"
+      },
+      "require": {
+        "types": "./src/index.d.ts",
+        "default": "./src/index.cjs"
+      }
+    }
+  },
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
     "clean": "rm -rf ./lib/",
@@ -19,35 +31,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryansonshine/typescript-npm-package-template.git"
+    "url": "git+https://github.com/shunn2/ws-cache"
   },
   "license": "MIT",
   "author": {
-    "name": "Ryan Sonshine",
-    "email": "ryansonshine@users.noreply.github.com",
-    "url": "https://github.com/ryansonshine"
+    "name": "Cho Seong Hoon",
+    "email": "chsida655@gmail.com",
+    "url": "https://github.com/shunn2"
   },
   "engines": {
     "node": ">=12.0"
   },
   "keywords": [
-    "boilerplate",
-    "template",
     "typescript",
-    "vscode",
-    "jest",
-    "husky",
-    "commitizen",
-    "semantic-release",
-    "codecov"
+    "npm",
+    "package",
+    "localstorage",
+    "webstorage"
   ],
   "bugs": {
-    "url": "https://github.com/ryansonshine/typescript-npm-package-template/issues"
+    "url": "https://github.com/shunn2/ws-cache/issues",
+    "email": "chsida655@gmail.com"
   },
-  "homepage": "https://github.com/ryansonshine/typescript-npm-package-template#readme",
+  "homepage": "https://github.com/shunn2/ws-cache",
   "devDependencies": {
-    "@ryansonshine/commitizen": "^4.2.8",
-    "@ryansonshine/cz-conventional-changelog": "^3.3.4",
     "@types/jest": "^27.5.2",
     "@types/node": "^12.20.11",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
