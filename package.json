@@ -1,6 +1,6 @@
 {
   "name": "wbs-cache",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "A service that serving web storage for your application",
   "main": "./dist/index.js",
   "files": [

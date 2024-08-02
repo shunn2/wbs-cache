@@ -1,4 +1,4 @@
-import { ExpireOption } from '@src/types';
+import { ExpireOption } from '../types';
 
 export const DEFAULT_EXPIRE_TIME = 1000 * 60 * 30; // 30 minutes
 

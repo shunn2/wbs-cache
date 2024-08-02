@@ -1,4 +1,4 @@
-import LocalStorageService from '@src/utils/localStorage';
+import LocalStorageService from '../../utils/localStorage';
 
 const localStorageService = new LocalStorageService();
 
