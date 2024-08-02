@@ -5,6 +5,7 @@ module.exports = {
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
+    extraFileExtensions: ['.cjs'],
   },
   extends: [
     'eslint:recommended',
@@ -29,4 +30,12 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
   },
+  overrides: [
+    {
+      files: ['*.cjs'],
+      rules: {
+        // .cjs 파일에 대한 규칙 설정 (필요 시)
+      },
+    },
+  ],
 };

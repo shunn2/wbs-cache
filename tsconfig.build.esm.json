@@ -2,15 +2,10 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": "./src",
-    "target": "ES6",
     "module": "ESNext",
     "declaration": true,
-    "declarationMap": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "strict": true
+    "declarationMap": true
   },
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "src/test/**/*.spec.ts"]
 }
